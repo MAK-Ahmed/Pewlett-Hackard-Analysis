@@ -42,18 +42,24 @@ e.last_name,
 e.birth_date,
 de.from_date,
 de.to_date
-
+into mentorship_eligibility
 FROM employees as e
-JOIN dept_emp as de on (e.emp_no = de.de)
-JOIN title as t on e.emp_no=t.emp_no
+JOIN dept_emp as de on e.emp_no = de.emp_no
+JOIN titles as t on e.emp_no=t.emp_no
+Where de.to_date = '9999-01-01'
+AND e.birth_date between '1965-01-01' and '1965-12-31'
 
-select * 
-from Dept_emp as de
+Select Distinct ON (m.emp_no)
+m.emp_no,
+m.first_name,
+m.last_name,
+t.title
+into distinct_mentorship_title
+from mentorship_eligibility as m
+JOIN titles as t on m.emp_no = t.emp_no
 
-select * from employees
 
-join employees as e on de.de = e.emp_no
-
-drop table dept_emp
-
-
+Select count(title), title
+from distinct_mentorship_title
+group by title
+order by count (title) desc
