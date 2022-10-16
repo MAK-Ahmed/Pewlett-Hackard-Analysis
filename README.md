@@ -16,6 +16,6 @@ As the "silver tsumani" beigns to make its impact there will be a total of 49,45
 ### Additional information
 Based on the additioanl query and table as noted below, there are not enough staff to provide mentorship for the roles that need to be filled. There is also a notable difference that the titles for those retiring are not available in the mentorship program. As noted in the two queries below, there is a gap between roles that are retiring and mentors available for mentorship
 
-![Query of membership count by title](Mentorship_counts_query.png)
+![Query of membership count by title](Mentorship_counts_query.PNG)
 
-![Membership Count by title](Mentorship_count_title.png)
+![Membership Count by title](Mentorship_count_title.PNG)
